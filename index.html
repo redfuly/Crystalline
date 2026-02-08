@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crystalline - Your Custom Code Language</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A revolutionary custom programming language designed for clarity, power, and elegance. Code with crystalline precision on Windows.">
+    <meta name="keywords" content="Crystalline, programming language, custom language, Windows, coding, development">
+    <meta name="author" content="Crystalline">
+    
+    <!-- Open Graph Meta Tags (Facebook, LinkedIn, Discord) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Crystalline - Your Custom Code Language">
+    <meta property="og:description" content="A revolutionary custom programming language designed for clarity, power, and elegance. Code with crystalline precision on Windows.">
+    <meta property="og:image" content="https://YOUR-USERNAME.github.io/crystalline-website/photo_5.webp">
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/crystalline-website/">
+    <meta property="og:site_name" content="Crystalline">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crystalline - Your Custom Code Language">
+    <meta name="twitter:description" content="A revolutionary custom programming language designed for clarity, power, and elegance. Code with crystalline precision on Windows.">
+    <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/crystalline-website/photo_5.webp">
+    
+    <!-- Discord Embed Color -->
+    <meta name="theme-color" content="#0080ff">
+    
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -391,6 +414,7 @@
             font-size: 2rem;
             color: rgba(77, 166, 255, 0.4);
             z-index: 1;
+            pointer-events: none;
         }
 
         .screenshot-container::after {
@@ -400,6 +424,8 @@
             background: linear-gradient(135deg, rgba(0, 128, 255, 0.2), rgba(77, 166, 255, 0.3));
             opacity: 0;
             transition: opacity 0.4s;
+            z-index: 3;
+            pointer-events: none;
         }
 
         .screenshot-container:hover {
@@ -418,6 +444,11 @@
             object-fit: cover;
             position: relative;
             z-index: 2;
+        }
+
+        /* Hide placeholder text when image is loaded */
+        .screenshot-container:has(img)::before {
+            display: none;
         }
 
         .content-section {
